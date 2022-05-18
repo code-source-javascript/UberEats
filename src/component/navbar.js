@@ -5,7 +5,7 @@ import SearchBar from "../features/SearchBar/searchBar";
 
 const Navbar = () => {
   return (
-    <div className="w-screen h-24 fixed top-0 right-0 left-0 z-30 bg-white active:bg-white flex justify-between items-center ">
+    <div className="w-screen h-24 fixed top-0 right-0 left-0 z-30 bg-white active:bg-white flex justify-between items-center border-b border-gray-200">
       {/* menu and logo */}
       <div className="flex items-center justify-evenly w-2/12">
         <div className="cursor-pointer">
