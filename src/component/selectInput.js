@@ -22,7 +22,7 @@ const SelectInput = () => {
     <div className="w-full h-full overflow-visible bg-white ">
       {/* selected item */}
       <div
-        className="h-full w-full bg-white flex justify-around items-center  cursor-pointer "
+        className="h-full w-full bg-white flex xl:justify-around  justify-between   items-center  cursor-pointer "
         onClick={() => {
           setShow(!show);
         }}

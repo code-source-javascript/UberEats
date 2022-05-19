@@ -6,17 +6,17 @@ import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa";
 const Footer = () => {
   return (
     <div className=" w-screen px-5 py-16 bg-black text-white  ">
-      <div className="flex justify-end items-end pb-5 border-b  relative">
-        <div className="flex flex-col absolute top-0 bottom-0 left-0 justify-between">
-          <div className="cursor-pointer flex ml-5 ">
+      <div className="flex  md:flex-row flex-col justify-end md:items-end items-center pb-5 border-b  relative">
+        <div className="flex flex-col md:absolute top-0 bottom-0 left-0 justify-between mb-5 md:mb-0">
+          <div className="cursor-pointer flex md:ml-5  ">
             <span className="text-3xl">Uber {""}</span>
             <span className="text-3xl font-semibold"> Eats</span>
           </div>
-          <div className="flex justify-start items-center w-1/2">
+          <div className="flex justify-start items-center md:w-1/2 w-full">
             <img
-              src="./asset/images/appStore.png"
+              src="./asset/images/appStore.svg"
               alt="App Store"
-              className="h-20  object-cover cursor-pointer"
+              className="object-cover mr-2 cursor-pointer"
             />
             <img
               src="./asset/images/playStore.png"
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 w-1/2">
+        <div className="md:grid grid-cols-2 md:w-1/2 w-3/4 items-center flex flex-col">
           <FooterLink title="Get help" />
           <FooterLink title="Restaurants near me" />
           <FooterLink title="Buy gift cards" />
@@ -41,21 +41,21 @@ const Footer = () => {
           <FooterLink title="English" />
         </div>
       </div>
-      <div className="flex justify-between">
-        <div className="flex items-center">
+      <div className="flex justify-between flex-col-reverse md:flex-row">
+        <div className="flex items-center justify-center md:justify-start ">
           <FaFacebookSquare className="h-5 w-5 cursor-pointer  m-3" />
           <FaTwitter className="h-5 w-5 cursor-pointer  m-3" />
           <FaInstagram className="h-5 w-5 cursor-pointer  m-3" />
         </div>
         <div>
-          <div className="flex justify-end mt-2">
+          <div className="flex md:justify-end justify-center mt-2">
             <FooterLink title="Pravicy Policy" />
             <FooterLink title="Terms" />
             <FooterLink title="Pricing" />
             <FooterLink title="Do not sell info (California)" />
           </div>
-          <div className=" mt-2  text-sm font-light flex ">
-            <div className="">
+          <div className=" mt-2  text-sm font-light flex flex-col md:flex-row ">
+            <div className="md:mb-0 mb-5">
               This site is protected by reCAPTCHA and the Google{" "}
               <span className="cursor-pointer hover:underline">
                 Privacy Policy
@@ -66,7 +66,9 @@ const Footer = () => {
               </span>{" "}
               apply.
             </div>
-            <div className="mx-3">&copy; 2022 Uber Technology</div>
+            <div className="mx-3 text-center md:text-left ">
+              &copy; 2022 Uber Technology
+            </div>
           </div>
         </div>
       </div>

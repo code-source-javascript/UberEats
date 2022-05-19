@@ -1,38 +1,37 @@
 import React from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
-import SearchBar from "../features/SearchBar/searchBar";
 
-const Navbar = ({ background, show }) => {
+const Navbar = ({ background, show, children }) => {
   return (
     <div
-      className={`w-screen h-24 fixed top-0 right-0 left-0 z-30 ${background} transition-all duration-300 ease-in-out flex justify-between items-center  border-gray-200`}
+      className={`w-screen h-24 xl:fixed absolute top-0 right-0 left-0 z-30 ${background} bg-transparent  transition-all duration-300 ease-in-out flex justify-between items-center  border-gray-200 overflow-hidden`}
     >
       {/* menu and logo */}
-      <div className="flex items-center justify-evenly w-2/12">
+      <div className="flex items-center justify-evenly md:ml-3 ">
         <div className="cursor-pointer">
           <IoMdMenu className="h-7 w-7" />
         </div>
-        <div className="cursor-pointer">
-          <span className="text-3xl">Uber</span>
+        <div className="cursor-pointer md:ml-3 ml-1 font-sans">
+          <span className="text-3xl mr-1">Uber</span>
           <span className="text-3xl font-semibold">Eats</span>
         </div>
       </div>
       {/* Search */}
-      <div className="w-8/12">
+      <div className="hidden xl:block w-1/2">
         <div
-          className={`h-14 w-4/6 ml-5 ${show} transition-all duration-300 ease-in`}
+          className={`h-14 w-full ml-5 ${show} transition-all duration-300 ease-in`}
         >
-          <SearchBar color="bg-gray-100" radius="rounded-sm" />
+          {children}
         </div>
       </div>
       {/* account */}
-      <div className="flex w-2/12">
-        <div className="py-3 px-5 bg-white rounded-full flex justify-evenly items-center cursor-pointer shadow-lg drop-shadow-lg  hover:bg-gray-200">
-          <FaUserAlt className="h-5 w-4" />
-          <span className="ml-2 whitespace-nowrap">Log in</span>
+      <div className="flex md:mr-3 ">
+        <div className="md:py-3 md:px-4 p-2 bg-white rounded-full flex justify-evenly items-center cursor-pointer shadow-lg drop-shadow-lg  hover:bg-gray-200">
+          <FaUserAlt className="md:h-5 md:w-4  h-2 w-3" />
+          <span className="ml-2 whitespace-nowrap hidden xl:block">Log in</span>
         </div>
-        <div className="py-3 px-5 bg-black whitespace-nowrap text-white rounded-full flex justify-evenly items-center ml-3 cursor-pointer hover:opacity-60">
+        <div className="md:py-3 md:px-4 p-2 text-xs md:text-sm bg-black whitespace-nowrap text-white rounded-full sm:flex justify-evenly items-center ml-3 cursor-pointer hover:opacity-60  ">
           Sign up
         </div>
       </div>

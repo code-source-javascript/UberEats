@@ -1,7 +1,7 @@
 import React from "react";
 import { HiLocationMarker } from "react-icons/hi";
 
-const SearchBar = ({ color, radius }) => {
+const AddressBar = ({ color, radius }) => {
   return (
     <div
       className={`h-full w-full flex ${color} ${radius} hover:border-b-2 border-black`}
@@ -12,10 +12,10 @@ const SearchBar = ({ color, radius }) => {
       <input
         type="text"
         placeholder="Enter delivery address"
-        className={`w-11/12 h-full outline-none text-gray-700 bg-transparent `}
+        className={`w-10/12 h-full outline-none text-gray-700 bg-transparent `}
       />
     </div>
   );
 };
 
-export default SearchBar;
+export default AddressBar;
