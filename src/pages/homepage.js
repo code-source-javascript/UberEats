@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaFacebookSquare, FaTwitter, FaInstagram } from "react-icons/fa";
 import FooterLink from "../component/footerLink";
 import HomeFeed from "../component/homeFeed";
@@ -6,10 +6,30 @@ import Navbar from "../component/navbar";
 import SelectInput from "../component/selectInput";
 import SearchBar from "../features/SearchBar/searchBar";
 
+function useScroll() {
+  const [scrollY, setScrollY] = useState(0);
+
+  const onScroll = () => {
+    setScrollY(window.scrollY);
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
+  return scrollY;
+}
+
 const Homepage = () => {
+  const y = useScroll();
+
   return (
-    <div className="h-screen w-screen bg-white overflow-scroll overflow-y-scroll overflow-x-hidden font-body">
-      <Navbar />
+    <div className=" w-screen bg-white overflow-scroll overflow-y-scroll overflow-x-hidden font-body">
+      <Navbar
+        background={y > 5 ? "bg-white border-b" : "bg-transparent"}
+        show={y > 424 ? "flex opacity-100" : "hidden opacity-0"}
+      />
       <div className="relative h-screen w-screen">
         <img
           src="./asset/images/landing.webp"
