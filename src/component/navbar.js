@@ -6,7 +6,7 @@ import SearchBar from "../features/SearchBar/searchBar";
 const Navbar = ({ background, show }) => {
   return (
     <div
-      className={`w-screen h-24 fixed top-0 right-0 left-0 z-30 ${background} active:bg-white flex justify-between items-center  border-gray-200`}
+      className={`w-screen h-24 fixed top-0 right-0 left-0 z-30 ${background} transition-all duration-300 ease-in-out flex justify-between items-center  border-gray-200`}
     >
       {/* menu and logo */}
       <div className="flex items-center justify-evenly w-2/12">
@@ -15,13 +15,13 @@ const Navbar = ({ background, show }) => {
         </div>
         <div className="cursor-pointer">
           <span className="text-3xl">Uber</span>
-          <span className="text-3xl font-semibold"> Eats</span>
+          <span className="text-3xl font-semibold">Eats</span>
         </div>
       </div>
       {/* Search */}
       <div className="w-8/12">
         <div
-          className={`h-14 w-4/6 ml-5 ${show} transition-all duration-500 ease-in`}
+          className={`h-14 w-4/6 ml-5 ${show} transition-all duration-300 ease-in`}
         >
           <SearchBar color="bg-gray-100" radius="rounded-sm" />
         </div>

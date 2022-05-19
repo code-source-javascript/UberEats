@@ -28,7 +28,7 @@ const Homepage = () => {
     <div className=" w-screen bg-white overflow-scroll overflow-y-scroll overflow-x-hidden font-body">
       <Navbar
         background={y > 5 ? "bg-white border-b" : "bg-transparent"}
-        show={y > 424 ? "flex opacity-100" : "hidden opacity-0"}
+        show={y > 460 ? " opacity-100" : " opacity-0"}
       />
       <div className="relative h-screen w-screen">
         <img
@@ -145,20 +145,27 @@ const Homepage = () => {
       </div>
 
       {/* footer */}
-      <div className=" w-screen px-5 py-16 bg-black ">
-        <div className="flex justify-between items-end pb-5 border-b ">
-          <div className="flex justify-start items-center w-1/2">
-            <img
-              src="./asset/images/appStore.png"
-              alt="App Store"
-              className="h-20  object-cover cursor-pointer"
-            />
-            <img
-              src="./asset/images/playStore.png"
-              alt="Play Store"
-              className="h-14 object-cover cursor-pointer"
-            />
+      <div className=" w-screen px-5 py-16 bg-black text-white  ">
+        <div className="flex justify-end items-end pb-5 border-b  relative">
+          <div className="flex flex-col absolute top-0 bottom-0 left-0 justify-between">
+            <div className="cursor-pointer flex ml-5 ">
+              <span className="text-3xl">Uber {""}</span>
+              <span className="text-3xl font-semibold"> Eats</span>
+            </div>
+            <div className="flex justify-start items-center w-1/2">
+              <img
+                src="./asset/images/appStore.png"
+                alt="App Store"
+                className="h-20  object-cover cursor-pointer"
+              />
+              <img
+                src="./asset/images/playStore.png"
+                alt="Play Store"
+                className="h-14 object-cover cursor-pointer"
+              />
+            </div>
           </div>
+
           <div className="grid grid-cols-2 w-1/2">
             <FooterLink title="Get help" />
             <FooterLink title="Restaurants near me" />
@@ -176,9 +183,9 @@ const Homepage = () => {
         </div>
         <div className="flex justify-between">
           <div className="flex items-center">
-            <FaFacebookSquare className="h-5 w-5 cursor-pointer text-white  m-3" />
-            <FaTwitter className="h-5 w-5 cursor-pointer text-white  m-3" />
-            <FaInstagram className="h-5 w-5 cursor-pointer text-white  m-3" />
+            <FaFacebookSquare className="h-5 w-5 cursor-pointer  m-3" />
+            <FaTwitter className="h-5 w-5 cursor-pointer  m-3" />
+            <FaInstagram className="h-5 w-5 cursor-pointer  m-3" />
           </div>
           <div>
             <div className="flex justify-end mt-2">
@@ -187,7 +194,7 @@ const Homepage = () => {
               <FooterLink title="Pricing" />
               <FooterLink title="Do not sell info (California)" />
             </div>
-            <div className=" mt-2 text-white text-sm font-light flex ">
+            <div className=" mt-2  text-sm font-light flex ">
               <div className="">
                 This site is protected by reCAPTCHA and the Google{" "}
                 <span className="cursor-pointer hover:underline">
