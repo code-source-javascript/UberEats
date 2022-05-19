@@ -27,8 +27,8 @@ const Navbar = ({ background, show, children }) => {
       </div>
       {/* account */}
       <div className="flex md:mr-3 ">
-        <div className="md:py-3 md:px-4 p-2 bg-white rounded-full flex justify-evenly items-center cursor-pointer shadow-lg drop-shadow-lg  hover:bg-gray-200">
-          <FaUserAlt className="md:h-5 md:w-4  h-2 w-3" />
+        <div className="md:py-3 md:px-4 p-2 bg-white rounded-full flex justify-evenly items-center text-sm cursor-pointer shadow-lg drop-shadow-lg  hover:bg-gray-200">
+          <FaUserAlt className="md:h-4 md:w-3  h-2 w-3" />
           <span className="ml-2 whitespace-nowrap hidden xl:block">Log in</span>
         </div>
         <div className="md:py-3 md:px-4 p-2 text-xs md:text-sm bg-black whitespace-nowrap text-white rounded-full sm:flex justify-evenly items-center ml-3 cursor-pointer hover:opacity-60  ">

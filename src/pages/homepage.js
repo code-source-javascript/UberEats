@@ -5,6 +5,7 @@ import Navbar from "../component/navbar";
 import SelectInput from "../component/selectInput";
 import AddressBar from "../features/AddressBar/addressBar";
 import Footer from "../component/footer";
+import LocationItem from "../component/locationItem";
 
 function useScroll() {
   const [scrollY, setScrollY] = useState(0);
@@ -108,22 +109,22 @@ const Homepage = () => {
         </div>
         {/* cities */}
         <div className=" w-full grid md:grid-cols-4 grid-cols-2 ">
-          <h1 className="text-gray-600 m-3 cursor-pointer">Accra</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Kumasi</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Suyani</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Tamale</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Koforidua</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Akim Oda</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Akroso</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Assin Fosu</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Kasoa</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Adenta</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Winneba</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Apam</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Tema</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Wa</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Ho</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Tarkoradi</h1>
+          <LocationItem title=" Accra" />
+          <LocationItem title=" Kumasi" />
+          <LocationItem title=" Suyani" />
+          <LocationItem title=" Tamale" />
+          <LocationItem title=" Koforidua" />
+          <LocationItem title=" Akim Oda" />
+          <LocationItem title=" Akroso" />
+          <LocationItem title=" Assin Fosu" />
+          <LocationItem title=" Kasoa" />
+          <LocationItem title=" Adenta" />
+          <LocationItem title=" Winneba" />
+          <LocationItem title=" Apam" />
+          <LocationItem title=" Tema" />
+          <LocationItem title=" Wa" />
+          <LocationItem title=" Ho" />
+          <LocationItem title=" Tarkoradi" />
         </div>
       </div>
       {/* Country */}
@@ -135,22 +136,22 @@ const Homepage = () => {
           </h1>
         </div>
         <div className=" w-full grid md:grid-cols-4 grid-cols-2 mt-5">
-          <h1 className="text-gray-600 m-3 cursor-pointer">Ghana</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Togo</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">UK</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Mali</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Koforidua</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Akim Oda</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Akroso</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Assin Fosu</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Kasoa</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Adenta</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Winneba</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Apam</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Tema</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Wa</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Ho</h1>
-          <h1 className="text-gray-600 m-3 cursor-pointer">Tarkoradi</h1>
+          <LocationItem title=" Ghana" />
+          <LocationItem title=" Togo" />
+          <LocationItem title=" UK" />
+          <LocationItem title=" Mali" />
+          <LocationItem title=" Koforidua" />
+          <LocationItem title=" Akim Oda" />
+          <LocationItem title=" Akroso" />
+          <LocationItem title=" Assin Fosu" />
+          <LocationItem title=" Kasoa" />
+          <LocationItem title=" Adenta" />
+          <LocationItem title=" Winneba" />
+          <LocationItem title=" Apam" />
+          <LocationItem title=" Tema" />
+          <LocationItem title=" Wa" />
+          <LocationItem title=" Ho" />
+          <LocationItem title=" Tarkoradi" />
         </div>
       </div>
 
