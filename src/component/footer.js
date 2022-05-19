@@ -55,7 +55,7 @@ const Footer = () => {
             <FooterLink title="Do not sell info (California)" />
           </div>
           <div className=" mt-2  text-sm font-light flex flex-col md:flex-row ">
-            <div className="md:mb-0 mb-5">
+            <div className="md:mb-0 mb-5 text-center" >
               This site is protected by reCAPTCHA and the Google{" "}
               <span className="cursor-pointer hover:underline">
                 Privacy Policy

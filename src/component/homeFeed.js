@@ -2,7 +2,7 @@ import React from "react";
 
 const HomeFeed = ({ image, topic, detail, alt }) => {
   return (
-    <div className="m-5 cursor-pointer ">
+    <div className="xl:m-5 my-5 cursor-pointer ">
       <div className="w-full lg:h-80  shadow-lg lg:rounded flex justify-center border border-gray-50">
         <img
           src={image}

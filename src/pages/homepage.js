@@ -74,6 +74,10 @@ const Homepage = () => {
           </div>
         </div>
       </div>
+      <div className="w-screen px-5 my-8 md:hidden">
+       
+      </div>
+      
       <div className="w-screen grid lg:grid-cols-3  gap-3 md:px-5  px-3">
         <HomeFeed
           image="./asset/images/image123.webp"
