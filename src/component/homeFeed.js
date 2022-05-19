@@ -1,15 +1,10 @@
 import React from "react";
 
-const HomeFeed = ({ image, topic, detail, alt }) => {
+const HomeFeed = ({ image, topic, detail }) => {
   return (
     <div className="xl:m-5 my-5 cursor-pointer ">
       <div className="w-full lg:h-80  shadow-lg lg:rounded flex justify-center border border-gray-50">
-        <img
-          src={image}
-          alt="something"
-          className="h-full w-full rounded hidden lg:block"
-        />
-        <img src={alt} alt="something" className=" w-full  lg:hidden" />
+        <img src={image} alt="something" className="h-full w-full rounded " />
       </div>
       <div className="mt-5">
         <h1 className="text-2xl font-[500] text-black">{topic}</h1>

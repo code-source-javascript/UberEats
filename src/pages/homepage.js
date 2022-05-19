@@ -74,26 +74,21 @@ const Homepage = () => {
           </div>
         </div>
       </div>
-      <div className="w-screen px-5 my-8 md:hidden">
-       
-      </div>
-      
+      <div className="w-screen px-5 my-8 md:hidden"></div>
+
       <div className="w-screen grid lg:grid-cols-3  gap-3 md:px-5  px-3">
         <HomeFeed
-          image="./asset/images/image123.webp"
-          alt="./asset/images/image1241.png"
+          image="./asset/images/image1241.png"
           topic="Feed your employees"
           detail="Create a business account"
         />
         <HomeFeed
-          image="./asset/images/image124.webp"
-          alt="./asset/images/image1231.png"
+          image="./asset/images/image1231.png"
           topic="Your restaurant, delivered"
           detail="Add your restaurant"
         />
         <HomeFeed
-          image="./asset/images/image125.webp"
-          alt="./asset/images/image1251.png"
+          image="./asset/images/image1251.png"
           topic="Deliver with Uber Eats"
           detail="Sign up to deliver"
         />
