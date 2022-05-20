@@ -38,7 +38,7 @@ const Homepage = () => {
       <div className="fixed top-0 left-0 right-0 w-screen h-14 xl:hidden z-40">
         {y > 460 ? <AddressBar color="bg-gray-200" /> : ""}
       </div>
-      <div className="relative h-screen w-screen">
+      <div className="relative h-screen w-screen bg-[#ebb734]">
         <img
           src="./asset/images/landing.webp"
           alt="landingImage"
