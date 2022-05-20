@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Homepage from "./pages/homepage";
-import LoginPage from "./pages/loginPage";
+import LoginPage from "./pages/Login/loginPage";
 
 export const EatContext = React.createContext({});
 
@@ -11,7 +11,7 @@ function App() {
     sideBar,
     setSideBar,
     countryCodeBar,
-    setCountryCodeBar
+    setCountryCodeBar,
   };
   return (
     <EatContext.Provider value={store}>
