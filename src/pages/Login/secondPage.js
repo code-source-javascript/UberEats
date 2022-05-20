@@ -1,8 +1,87 @@
-import React from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { BsArrowRight } from "react-icons/bs";
 import { HiOutlineArrowLeft } from "react-icons/hi";
 
 const SecondPage = () => {
+  const [input1, setInput1] = useState("");
+  const [input2, setInput2] = useState("");
+  const [input3, setInput3] = useState("");
+  const [input4, setInput4] = useState("");
+
+  const ref1 = useRef(null);
+  const ref2 = useRef(null);
+  const ref3 = useRef(null);
+  const ref4 = useRef(null);
+
+  useEffect(() => {
+    (function handleChange() {
+      if (input1 === "") {
+        ref1.current.focus();
+      }
+      if (input1 !== "") {
+        ref2.current.focus();
+      } else {
+        setInput1(input2);
+        setInput2(input3);
+        setInput3(input4);
+        setInput4("");
+      }
+
+      if (input2 !== "") {
+        ref3.current.focus();
+      } else {
+        setInput2(input3);
+        setInput3(input4);
+        setInput4("");
+      }
+      if (input3 !== "") {
+        ref4.current.focus();
+      } else {
+        setInput3(input4);
+        setInput4("");
+      }
+      if (input4 !== "") {
+        // submit here
+      }
+    })();
+
+    function handleDelete(e) {
+      // input 2
+      if (
+        ref2.current.focus &&
+        (e.key === "Delete" || e.key === "Backspace") &&
+        input2 === ""
+      ) {
+        setInput1("");
+        ref1.current.focus();
+      }
+      // input 3
+      if (
+        ref3.current.focus &&
+        (e.key === "Delete" || e.key === "Backspace") &&
+        input3 === ""
+      ) {
+        setInput2("");
+        ref2.current.focus();
+      }
+      // input 4
+      if (
+        ref4.current.focus &&
+        (e.key === "Delete" || e.key === "Backspace") &&
+        input4 === ""
+      ) {
+        setInput3("");
+        ref3.current.focus();
+      }
+    }
+
+    document.addEventListener("keydown", handleDelete);
+
+    return () => {
+      document.removeEventListener("keydown", handleDelete);
+    };
+  }, [input1, input2, input3, input4]);
+
   return (
     <div className="w-full">
       <div>
@@ -12,20 +91,40 @@ const SecondPage = () => {
       </div>
       <div className="md:w-4/6 w-full flex justify-between mt-3">
         <input
-          type="text"
           className="h-14 w-14 bg-gray-100 text-center outline-black"
+          type="text"
+          value={input1}
+          onChange={(e) => {
+            setInput1(e.target.value);
+          }}
+          ref={ref1}
         />
         <input
-          type="text"
           className="h-14 w-14 bg-gray-100 text-center outline-black"
+          type="text"
+          value={input2}
+          onChange={(e) => {
+            setInput2(e.target.value);
+          }}
+          ref={ref2}
         />
         <input
-          type="text"
           className="h-14 w-14 bg-gray-100 text-center outline-black"
+          type="text"
+          value={input3}
+          onChange={(e) => {
+            setInput3(e.target.value);
+          }}
+          ref={ref3}
         />
         <input
-          type="text"
           className="h-14 w-14 bg-gray-100 text-center outline-black"
+          type="text"
+          value={input4}
+          onChange={(e) => {
+            setInput4(e.target.value);
+          }}
+          ref={ref4}
         />
       </div>
       <div className="mt-7">
