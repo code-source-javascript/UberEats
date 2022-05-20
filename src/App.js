@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Homepage from "./pages/homepage";
+import LoginPage from "./pages/loginPage";
 
 export const EatContext = React.createContext({});
 
@@ -12,7 +13,8 @@ function App() {
   return (
     <EatContext.Provider value={store}>
       <div className="">
-        <Homepage />
+        {/* <Homepage /> */}
+        <LoginPage />
       </div>
     </EatContext.Provider>
   );
