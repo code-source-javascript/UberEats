@@ -6,6 +6,7 @@ import SelectInput from "../component/selectInput";
 import AddressBar from "../features/AddressBar/addressBar";
 import Footer from "../component/footer";
 import LocationItem from "../component/locationItem";
+import SideNav from "../component/sideNav";
 
 function useScroll() {
   const [scrollY, setScrollY] = useState(0);
@@ -33,6 +34,7 @@ const Homepage = () => {
       >
         <AddressBar color="bg-gray-200" />
       </Navbar>
+      <SideNav />
       <div className="fixed top-0 left-0 right-0 w-screen h-14 xl:hidden z-40">
         {y > 460 ? <AddressBar color="bg-gray-200" /> : ""}
       </div>
@@ -56,7 +58,11 @@ const Homepage = () => {
               <SelectInput />
             </div>
             {/* Search space for text */}
-            <div className="h-14 xl:w-7/12 w-2/3 m-1">
+            <div
+              className={`h-14 xl:w-7/12 w-2/3 m-1 ${
+                y > 460 ? "hidden" : "block"
+              }`}
+            >
               <AddressBar color="bg-white" />
             </div>
 

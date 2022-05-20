@@ -1,15 +1,22 @@
-import React from "react";
+import React, { useContext } from "react";
 import { FaUserAlt } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
+import { EatContext } from "../App";
 
 const Navbar = ({ background, show, children }) => {
+  const { setSideBar } = useContext(EatContext);
   return (
     <div
-      className={`w-screen h-24 xl:fixed absolute top-0 right-0 left-0 z-30 ${background} bg-transparent  transition-all duration-300 ease-in-out flex justify-between items-center  border-gray-200 overflow-hidden`}
+      className={`w-screen h-24 xl:fixed absolute top-0 right-0 left-0 z-30 ${background} bg-transparent  transition-all duration-300 ease-in-out flex justify-between items-center  border-gray-200 `}
     >
       {/* menu and logo */}
       <div className="flex items-center justify-evenly md:ml-3 ">
-        <div className="cursor-pointer">
+        <div
+          className="cursor-pointer"
+          onClick={() => {
+            setSideBar(true);
+          }}
+        >
           <IoMdMenu className="h-7 w-7" />
         </div>
         <div className="cursor-pointer md:ml-3 ml-1 font-sans">
