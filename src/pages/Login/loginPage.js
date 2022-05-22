@@ -4,6 +4,7 @@ import AuthNav from "../../component/authNav";
 import PhoneInput from "../../component/phoneInput";
 import FirstPage from "./firstPage";
 import SecondPage from "./secondPage";
+import ThirdPage from "./thirdPage";
 
 const LoginPage = () => {
   return (
@@ -11,7 +12,7 @@ const LoginPage = () => {
       <AuthNav />
       <div className="relative w-full h-full flex justify-center md:items-center mt-24 md:mt-0 z-10 ">
         <div className="w-5/6 md:w-96">
-          <SecondPage />
+          <ThirdPage />
         </div>
       </div>
     </div>
